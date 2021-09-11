@@ -3,4 +3,4 @@
 
 git add .   
 git commit -m "test"    
-git push -f origin master
+git push -f origin main
