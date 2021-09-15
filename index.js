@@ -1,7 +1,13 @@
 
 let moment = require('moment')
+let express = require('express')
+let app = express()
+let port = 48085
 
+app.get('/', (req, res) => {
+    res.send('Date is:', moment().toString())
+})
 
-console.log(moment().toString())
-console.log("test2")
-console.log("test2")
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Test server is running`)
+})
