@@ -4,6 +4,7 @@ let express = require('express')
 let app = express()
 let port = 48085
 
+console.log("starting")
 
 app.get('/', (req, res) => {
     res.send('Date is:', moment().toString())
