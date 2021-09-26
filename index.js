@@ -8,7 +8,7 @@ console.log("starting")
 
 
 app.get('/', (req, res) => {
-    res.send('Date is:', moment().toString())
+    res.send(200, `Date is: ${moment().toString()}`)
 })
 
 app.listen(port, '0.0.0.0', () => {
