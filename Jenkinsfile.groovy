@@ -4,7 +4,7 @@ pipeline {
     environment {
 
         CRD = credentials('i1-root')
-        BRANCH_NAME = "opopop"
+        BRANCH_NAME = "${GIT_BRANCH.split("/")[1]}"
             
 
     }
@@ -15,6 +15,7 @@ pipeline {
                 echo 'Hello World'
                 echo 'How are you?'
                 echo "${env.GIT_BRANCH}"
+                echo "!!!! ${BRANCH_NAME}"
                 sh 'printenv'
             }
         }
