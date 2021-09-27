@@ -17,6 +17,7 @@ pipeline {
         
         stage('GGG') {
             steps {
+                
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}, ${env.BRANCH_NAME}, ${env.CHANGE_AUTHOR}, ${env.CHANGE_TARGET}, ${env.CHANGE_BRANCH},"
             }
         }
