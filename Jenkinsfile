@@ -14,7 +14,9 @@ pipeline {
         }
         
         stage('GGG') {
-            agent any
+            agent {
+                label 'instance2'
+            }
 
             steps {
                 echo 'mu mu mu!'
