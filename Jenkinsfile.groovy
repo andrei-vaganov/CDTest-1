@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo 'Hello World'
                 echo 'How are you?'
-                ecco "${env.GIT_BRANCH}"
+                echo "${env.GIT_BRANCH}"
                 sh 'printenv'
             }
         }
