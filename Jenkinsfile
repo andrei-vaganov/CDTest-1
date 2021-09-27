@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Hello World'
                 echo 'How are you?'
+                npm install
             }
         }
         stage('Deployyyy') {
