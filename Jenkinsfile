@@ -8,5 +8,11 @@ pipeline {
                 echo 'How are you?'
             }
         }
+        stage('Deployyyy') {
+            steps {
+                echo 'mu mu mu!'
+            }
+        }
+
     }
 }
