@@ -9,6 +9,7 @@ console.log("starting")
 
 app.get('/', (req, res) => {
     res.send(200, `Date is:  ${moment().toString()}`)
+    console.log('sds')
 })
 
 app.listen(port, '0.0.0.0', () => {
