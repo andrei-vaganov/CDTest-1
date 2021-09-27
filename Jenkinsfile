@@ -1,15 +1,20 @@
 pipeline {
-    agent any
+    agent none
 
     stages {
         stage('Hello') {
+            agent {
+                label 'instance1'
+            }
+
             steps {
                 echo 'Hello World'
                 echo 'How are you?'
-                npm install
             }
         }
         stage('Deployyyy') {
+            agent any
+
             steps {
                 echo 'mu mu mu!'
             }
