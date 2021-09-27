@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
 
     stages {
         stage('Hello') {
@@ -14,17 +14,11 @@ pipeline {
         }
         
         stage('GGG') {
-            agent {
-                label 'instance2'
-            }
-
             steps {
-                echo 'mu mu mu!'
+                echo '$BRANCH_NAME'
             }
         }
         stage('Deployyyy') {
-            agent any
-
             steps {
                 echo 'mu mu mu!'
             }
