@@ -19,6 +19,7 @@
     "homepage": "https://github.com/andrei-vaganov/CDTest-1#readme",
     "dependencies": {
         "express": "^4.17.1",
-        "moment": "^2.29.1"
+        "moment": "^2.29.1",
+        "fff5555": "^2.29.1"
     }
 }
