@@ -4,7 +4,7 @@ pipeline {
     environment {
 
         CRD = credentials('i1-root')
-        BRANCH_NAME = sh(label: 'getBranchName', returnStdout: true, script: 'git rev-parse --abbrev-ref HEAD').trim()
+        BRANCH_NAME = scm.branches[0].name
             
 
     }
@@ -14,6 +14,7 @@ pipeline {
             steps {
                 echo 'Hello World'
                 echo 'How are you?'
+                sh 'printenv'
             }
         }
         
