@@ -11,7 +11,7 @@ pipeline {
         
         stage('GGG') {
             steps {
-                echo $BRANCH_NAME
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}, ${env.BRANCH_NAME}"
             }
         }
         stage('Deployyyy') {
