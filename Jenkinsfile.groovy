@@ -4,7 +4,7 @@ pipeline {
     environment {
 
         CRD = credentials('i1-root')
-        BRANCH_NAME = scm.branches[0].name
+        BRANCH_NAME = "opopop"
             
 
     }
@@ -14,6 +14,7 @@ pipeline {
             steps {
                 echo 'Hello World'
                 echo 'How are you?'
+                ecco "${env.GIT_BRANCH}"
                 sh 'printenv'
             }
         }
