@@ -4,6 +4,8 @@ pipeline {
     environment {
 
         CRD = credentials('i1-root')
+        BRANCH_NAME = sh(label: 'getBranchName', returnStdout: true, script: 'git rev-parse --abbrev-ref HEAD').trim()
+            
 
     }
 
