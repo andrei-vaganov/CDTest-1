@@ -11,7 +11,7 @@ pipeline {
         
         stage('GGG') {
             steps {
-                echo '$BRANCH_NAME'
+                echo $BRANCH_NAME
             }
         }
         stage('Deployyyy') {
