@@ -12,6 +12,14 @@ pipeline {
                 echo 'How are you?'
             }
         }
+        
+        stage('GGG') {
+            agent any
+
+            steps {
+                echo 'mu mu mu!'
+            }
+        }
         stage('Deployyyy') {
             agent any
 
