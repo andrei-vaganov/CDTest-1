@@ -1,6 +1,12 @@
 pipeline {
     agent any
 
+    environment {
+
+        CRD = credentials('i1-root')
+
+    }
+
     stages {
         stage('Hello') {
             steps {
@@ -11,7 +17,7 @@ pipeline {
         
         stage('GGG') {
             steps {
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}, ${BRANCH_NAME}"
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}, ${env.BRANCH_NAME}, ${env.CRD}"
             }
         }
         stage('Deployyyy') {
