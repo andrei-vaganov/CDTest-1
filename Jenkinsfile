@@ -3,10 +3,6 @@ pipeline {
 
     stages {
         stage('Hello') {
-            agent {
-                label 'instance1'
-            }
-
             steps {
                 echo 'Hello World'
                 echo 'How are you?'
